@@ -18,4 +18,4 @@ runs:
   args:
     - '${{ inputs.commit-message }}'
     - "${{ inputs.markdown-files }}"
-
+    - "${{ secrets.GITHUB_TOKEN }}"
