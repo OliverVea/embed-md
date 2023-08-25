@@ -10,10 +10,10 @@ git config user.email "oliver.vea@gmail.com"
 git config pull.rebase true
 git config rebase.autoStash true
 
-git config --global github.token "$3"
+git config --global github.token "$1"
 
-COMMIT_MESSAGE="$1"
-FILES="${@:2}"
+COMMIT_MESSAGE="$2"
+FILES="${@:3}"
 
 # Embed files
 echo "Embedding files: $FILES"
