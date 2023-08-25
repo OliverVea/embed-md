@@ -2,7 +2,8 @@ FROM node:14
 
 RUN npm install embedme -g
 
-COPY . .
-#RUN chmod 755 docker-entrypoint.sh
+WORKDIR /app
+COPY . /app
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+RUN ["chmod", "+x", "./entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
