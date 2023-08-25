@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-cd /usr/src/app
-
 # Configure git
 git config --global --add safe.directory /github/workspace
 git config user.name "embed-md bot"
