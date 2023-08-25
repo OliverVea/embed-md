@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd /usr/src/app
+
 # Configure git
 git config --global --add safe.directory /github/workspace
 git config user.name "embed-md bot"
@@ -18,7 +20,7 @@ npx embedme "$FILES"
 echo "Commiting with message: $COMMIT_MESSAGE"
 
 # Pull and apply changes
-git pull
+git pull 
 
 # Stage and commit the changes
 git add "$FILES"
