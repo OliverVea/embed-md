@@ -2,8 +2,7 @@ FROM node:14
 
 RUN npm install embedme -g
 
-# copy files. 
-COPY ./docker-entrypoint.sh docker-entrypoint.sh
+COPY . /usr/src/app/
+RUN chmod 755 docker-entrypoint.sh
 
-# run embedme 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/src/app/docker-entrypoint.sh"]
