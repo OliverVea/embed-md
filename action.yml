@@ -12,13 +12,13 @@ inputs:
     description: "The message to associate with the commit containing the modified markdown files." 
     required: false
     default: "chore: embed code within markdown files"
-  github-token: 
-    description: "Gitbuh token" 
+  github-url: 
+    description: "Github url with PAT" 
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - '${{ inputs.github-token }}'
+    - '${{ inputs.github-url }}'
     - '${{ inputs.commit-message }}'
     - "${{ inputs.markdown-files }}"

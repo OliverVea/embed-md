@@ -6,11 +6,7 @@ ls
 # Configure git
 git config --global --add safe.directory /github/workspace
 git config user.name "embed-md bot"
-git config user.email "oliver.vea@gmail.com"
-git config pull.rebase true
-git config rebase.autoStash true
-
-git config --global github.token "$1"
+git remote set-url origin "$1"
 
 COMMIT_MESSAGE="$2"
 FILES="${@:3}"
