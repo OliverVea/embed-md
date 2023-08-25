@@ -4,4 +4,5 @@ FILES="${@:1}"
 
 # Embed files
 echo "Embedding files: $FILES"
-npx embedme "$FILES" --verify --stdout
+npx embedme "$FILES" --dry-run --stdout
+npx embedme "$FILES" --verify 
